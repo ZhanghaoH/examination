@@ -9,6 +9,9 @@ Vue.use(Router)
 export default new Router({
     mode: 'history',
     routes: [{
+        path: '/',
+        redirect: { name: 'knowledge' }
+    }, {
         path: '/knowledge',
         name: 'knowledge',
         component: knowledgeTab

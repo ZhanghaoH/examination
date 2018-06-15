@@ -2,7 +2,6 @@
   <div id="app">
     <exam-dialog :showDialog="isShow" :dialogDesc="warnTxt" @action-confirm="confirmInfo" @action-cancel="hideDialog"></exam-dialog>
     <!-- <button @click="showModal">弹窗</button> -->
-    <a href="login.html">登录</a>
     <keep-alive>
       <router-view/>
     </keep-alive>

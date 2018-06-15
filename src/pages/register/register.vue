@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="btn-wr">
-      <button class="btn btn-main">注册</button>
+      <button class="btn btn-main">{{actionTxt}}</button>
     </div>
   </div>
 </template>
@@ -29,6 +29,12 @@
 <script>
 const TIME_ALL = 60
 export default {
+  props: {
+    action: {
+      type: String,
+      default: 'register'
+    }
+  },
   data () {
     return {
       mobile: '',
@@ -39,6 +45,15 @@ export default {
       timeCount: TIME_ALL,
       timer: null
     }
+  },
+  computed: {
+    actionTxt () {
+      return this.action === 'reset' ? "重置密码" : "注册"
+    }
+  },
+  created () {
+    console.log(this.action);
+
   },
   destroyed () {
     clearInterval(this.timer)

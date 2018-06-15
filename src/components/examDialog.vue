@@ -51,11 +51,7 @@ export default {
 
 <style lang="less" scoped>
 @import '../base/app';
-.full-screen() {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-}
+
 .dialog-wr {
   .full-screen();
   z-index: 5;
@@ -92,6 +88,7 @@ export default {
       .dialog-btn {
         font-size: 18px;
         flex: 1;
+        border: none;
         background-color: #fff;
         &.dialog-btn-cancel {
           color: @warn-color;

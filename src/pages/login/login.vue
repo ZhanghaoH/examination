@@ -12,11 +12,11 @@
       </div>
     </div>
     <div class="tips-wr">
-      <a href="">忘记密码</a>
-      <a href="">立即注册</a>
+      <a href="register.html?action=reset">忘记密码</a>
+      <a href="register.html?action=register">立即注册</a>
     </div>
     <div class="btn-wr">
-      <button class="btn btn-main">登录</button>
+      <button class="btn btn-main" @click="login">登录</button>
     </div>
   </div>
 </template>
@@ -28,16 +28,18 @@ export default {
       mobile: '',
       pwd: ''
     }
+  },
+  methods: {
+    login () {
+      console.log("login")
+      window.location.assign('/')
+    }
   }
 }
 </script>
 
 <style lang="less" scoped>
 @import '../../base/app';
-html,
-body {
-  background-color: @tab-bg-color;
-}
 .container {
   padding: 50px 25px 0;
   .logo {
